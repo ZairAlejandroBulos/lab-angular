@@ -1,0 +1,25 @@
+<div class="card">
+    <div class="row">
+        <div class="col">
+            <a [routerLink]="['/detalle', instrumento.id]">
+                <img [src]="instrumento.imagenUrl" [alt]="instrumento.instrumento" style="height: 200px">
+            </a>
+        </div>
+        <div class="col">
+            <div class="card-body">
+                <h5 class="card-title">
+                    {{ instrumento.instrumento }}
+                </h5>
+                <p class="card-text">
+                    <strong> ${{  instrumento.precio }} </strong>
+                </p>
+                <p class="card-text">
+                    Costo de Envio: ${{  instrumento.costoEnvio }}
+                </p>
+                <p class="card-text">
+                    {{  instrumento.cantidadVendida }} vendidos
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

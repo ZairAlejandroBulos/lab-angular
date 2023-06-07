@@ -1,0 +1,51 @@
+<div *ngIf="instrumento" class="container mt-5">
+    <div class="row">
+        <div class="col">
+            <div class="row">
+                <img [src]="instrumento.imagenUrl" [alt]="instrumento.instrumento" style="height: 300px">
+            </div>
+            <div class="row">
+                <p>
+                    Descripción: <br/>
+                    {{ instrumento.descripcion }}
+                </p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="row">
+                <h6>
+                    {{ instrumento.cantidadVendida }} vendidos
+                </h6>
+            </div>
+            <div class="row">
+                <h2>
+                    {{ instrumento.instrumento }}
+                </h2>
+            </div>
+            <div class="row">
+                <h3>
+                    ${{ instrumento.precio }}
+                </h3>
+            </div>
+            <div class="row">
+                <h4>
+                    Marca: {{ instrumento.marca }}
+                </h4>
+            </div>
+            <div class="row">
+                <h4>
+                    Modelo: {{ instrumento.modelo }}
+                </h4>
+            </div>
+            <div class="row">
+                <h5>
+                    Costo Envio: ${{ instrumento.costoEnvio }}
+                </h5>
+            </div>
+            <div class="row">
+                <button type="button" class="btn btn-outline-primary">Agregar al Carrito</button>
+            </div>
+        </div>
+    </div>
+    <div class="row"></div>
+</div>

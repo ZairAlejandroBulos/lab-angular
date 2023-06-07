@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="mb-3">
+        <label for="instrumento" class="form-label">Instrumento</label>
+        <input [(ngModel)]="instrumento.instrumento" type="text" class="form-control" id="instrumento">
+    </div>
+
+    <div class="mb-3">
+        <label for="marca" class="form-label">Marca</label>
+        <input [(ngModel)]="instrumento.marca" type="text" class="form-control" id="marca">
+    </div>
+
+    <div class="mb-3">
+        <label for="modelo" class="form-label">Modelo</label>
+        <input [(ngModel)]="instrumento.modelo" type="text" class="form-control" id="modelo">
+    </div>
+
+    <div class="mb-3">
+        <label for="imagen" class="form-label">Imagen</label>
+        <input (change)="handleChangeImagen($event)" type="file" id="imagen" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label for="precio" class="form-label">Precio</label>
+        <input [(ngModel)]="instrumento.precio" type="number" class="form-control" id="precio">
+    </div>
+
+    <div class="mb-3">
+        <label for="costoEnvio" class="form-label">Costo de Envio</label>
+        <input [(ngModel)]="instrumento.costoEnvio" type="number" class="form-control" id="costoEnvio">
+    </div>
+
+    <div class="mb-3">
+        <label for="cantidadVendida" class="form-label">Cantidad Vendida</label>
+        <input [(ngModel)]="instrumento.cantidadVendida" type="number" class="form-control" id="cantidadVendida">
+    </div>
+    
+    <div class="form-floating">
+        <textarea [(ngModel)]="instrumento.descripcion" id="descripcion" class="form-control"></textarea>
+        <label for="descripcion">Descripción</label>
+    </div>
+    
+    <button (click)="submit(instrumento)" type="button" class="btn btn-success mt-3">
+        Guardar
+    </button>
+</div>

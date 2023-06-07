@@ -1,0 +1,7 @@
+<div class="container">
+    <ul class="list-group">
+        <li *ngFor="let instrumento of instrumentos; let index = index" class="list-group-item">
+            <app-item-instrumento [instrumento]="instrumento"></app-item-instrumento>
+        </li>
+    </ul>
+</div>
